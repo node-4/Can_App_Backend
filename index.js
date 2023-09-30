@@ -12,12 +12,14 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 require("./routes/userRoutes")(app);
+require("./routes/profileRoutes")(app);
+require("./routes/postRoutes")(app);
 
 
 // const routes = require('./routes/userRoutes');
+// const profileRoutes = require('./routes/profileRoutes');
 // const professionRoutes = require('./routes/professionRoutes');
 // const chooseProfessionRoutes = require('./routes/chooseProfessionRoutes');
-// const profileRoutes = require('./routes/profileRoutes');
 // const pageRoutes = require('./routes/pageRoutes');
 // const resumeRoutes = require('./routes/resumeRoutes');
 // const callRoutes = require('./routes/callRoutes');
@@ -33,9 +35,9 @@ require("./routes/userRoutes")(app);
 // const experienceRoutes = require('./routes/experienceRoutes');
 // const visionRoutes = require('./routes/visionRoutes');
 // app.use('/user', routes);
+// app.use('/profile', profileRoutes);
 // app.use('/profession', professionRoutes);
 // app.use('/chooseProfession', chooseProfessionRoutes);
-// app.use('/profile', profileRoutes);
 // app.use('/page', pageRoutes);
 // app.use('/resume', resumeRoutes);
 // app.use('/call', callRoutes);

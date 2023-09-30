@@ -6,14 +6,12 @@ const postSchema = new mongoose.Schema({
         ref: 'Profile',
         required: true,
     },
-    upload: {
-        image: [{
-            type: String,
-        }],
-        video: [{
-            type: String,
-        }],
-    },
+    image: [{
+        type: String,
+    }],
+    video: [{
+        type: String,
+    }],
     choosePostCategory: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category',

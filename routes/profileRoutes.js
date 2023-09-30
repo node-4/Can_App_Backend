@@ -21,15 +21,16 @@ const storage = new CloudinaryStorage({
 });
 const upload = multer({ storage: storage });
 // upload image End
+module.exports = (app) => {
 
 
 // router.post('/create', createProfile);
-router.post('/createProfile', upload.single('image'), createProfile);
+app.post('/profile/createProfile', upload.single('image'), createProfile);
 
-router.put('/profiles/:profileId', upload.single('image'), updateProfile);
+app.put('/profiles/:profileId', upload.single('image'), updateProfile);
 
-router.get('/profile/:profileId', getProfileById);
+app.get('/profile/:profileId', getProfileById);
+}
 
 
-
-module.exports = router;
+// module.exports = router;

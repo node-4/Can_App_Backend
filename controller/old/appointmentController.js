@@ -1,6 +1,6 @@
-const Appointment = require('../model/appointmentModel');
+const Appointment = require('../../model/appointmentModel');
 
-const { createAppointmentValidation, updateAppointmentValidation } = require('../validation/appointmentValidation');
+const { createAppointmentValidation, updateAppointmentValidation } = require('../../validation/appointmentValidation');
 
 
 

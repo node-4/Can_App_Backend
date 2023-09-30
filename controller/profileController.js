@@ -11,15 +11,7 @@ const { profileValidation, updateProfileValidation, profileIdValidation } = requ
 
 const createProfile = async (req, res) => {
     try {
-        const {
-            name,
-            text,
-            profession,
-            location,
-            taps,
-            managePages,
-            permission,
-        } = req.body;
+        const { name, text, profession, location, taps, managePages, permission,} = req.body;
 
         const { error } = profileValidation.validate(req.body);
         if (error) {
