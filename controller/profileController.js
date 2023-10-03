@@ -1,8 +1,8 @@
 const ProfileDb = require('../model/profileModel');
-const Profession = require('../model/professionModel');
-const Page = require('../model/pageModel');
-const ResumeDb = require('../model/resumeModel');
-const IntroductionDb = require('../model/introductionModel');
+// const Profession = require('../model/professionModel');
+// const Page = require('../model/pageModel');
+// const ResumeDb = require('../model/resumeModel');
+// const IntroductionDb = require('../model/introductionModel');
 
 const { profileValidation, updateProfileValidation, profileIdValidation } = require('../validation/profileValidation');
 
@@ -11,7 +11,7 @@ const { profileValidation, updateProfileValidation, profileIdValidation } = requ
 
 const createProfile = async (req, res) => {
     try {
-        const { name, text, profession, location, taps, managePages, permission,} = req.body;
+        const { name, text, profession, location, taps, managePages, permission, } = req.body;
 
         const { error } = profileValidation.validate(req.body);
         if (error) {
@@ -73,9 +73,6 @@ const createProfile = async (req, res) => {
         return res.status(500).json({ error: 'Failed to create profile' });
     }
 };
-
-
-
 const updateProfile = async (req, res) => {
     try {
         const profileId = req.params.profileId;
@@ -160,9 +157,6 @@ const updateProfile = async (req, res) => {
         return res.status(500).json({ error: 'Failed to update profile' });
     }
 };
-
-
-
 const getProfileById = async (req, res) => {
     try {
         const profileId = req.params.profileId;
@@ -207,9 +201,4 @@ const getProfileById = async (req, res) => {
         return res.status(500).json({ error: 'Failed to retrieve profile' });
     }
 };
-
-
-
-
-
 module.exports = { createProfile, updateProfile, getProfileById };

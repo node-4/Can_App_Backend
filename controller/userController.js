@@ -1,6 +1,6 @@
 require('dotenv').config()
 const userDb = require('../model/userModel');
-const ResumeDb = require('../model/resumeModel');
+// const ResumeDb = require('../model/resumeModel');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const nodemailer = require('nodemailer');
